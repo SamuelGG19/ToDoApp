@@ -11,3 +11,10 @@ class Todo:
 
     def mark_completed(self):
         self.completed = True
+
+    def add_tag(self, tag: str):
+        if tag in tags:
+            self.tags = self.tags
+        else:
+            self.tags.append(tag)
+
