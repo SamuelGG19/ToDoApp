@@ -6,20 +6,18 @@ class Todo:
         self.code_id: int = code_id
         self.title: str = title
         self.description: str = description
-        self.completed = bool = False
-        self.tags = list[str] = []
+        self.completed: bool = False
+        self.tags: list[str] = []
 
     def mark_completed(self):
         self.completed = True
 
     def add_tag(self, tag: str):
-        if tag in tags:
-            self.tags = self.tags
-        else:
+        if tag not in self.tags:
             self.tags.append(tag)
 
     def __str__(self) -> str:
-        return self.code_id - self.title
+        return "self.code_id - self.title"
 
 
 class TodoBook:
@@ -27,8 +25,10 @@ class TodoBook:
     def __init__(self):
         self.todos: dict[int: Todo] = {}
 
-    def add_todo(self, title: str, description: str) -> int:
-        self.todos[self.id: Todo(len(self.todos) + 1, title, description)]
-        return len(self.todos) + 1
+    #def add_todo(self, title: str, description: str) -> int:
+        #self.code_id: int = len(self.todos) + 1
+        #self.todo: Todo = Todo(self.code_id, self.title, self.description)]
+        #self.todos[self.code_id] = self.todo
+        #return self.code_id
 
 
