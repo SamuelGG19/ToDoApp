@@ -18,3 +18,5 @@ class Todo:
         else:
             self.tags.append(tag)
 
+    def __str__(self) -> str:
+        return self.code_id - self.title
